@@ -21,8 +21,8 @@ Domínio de referência: `ato.testto.com.br`
 ## Artefatos de design
 
 - **Canvas (14 telas ATO):** [ATO — console MVP](https://cursor.com/canvas/store-e933c4ea-dcae-43c5-be9e-dc7378ed0996/7dbf40e4-d47d-40f0-9808-e7cd5c309e1e)
-- **Figma de referência:** mock eleito das 14 telas (rebrand Atende → ATO) — [arquivo Figma](https://www.figma.com/design/ZnAnHc69565j5cx033A9ZK)
+- **Figma de referência:** mock eleito das 14 telas (rebrand Atende → ATO)
 
 ## Escolha de repositório
 
-Este site vive em **`wmreis-labs/ato-docs`**, alinhado ao padrão da org (um `*-docs` por produto). O portal `airtestto-docs` permanece focado no backend airtestto; ATO não é uma seção daquele site.
+Este site vive em **`wmreis-labs/ato-docs`**, alinhado ao padrão da org (um `*-docs` por produto).

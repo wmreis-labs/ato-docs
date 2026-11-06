@@ -7,7 +7,6 @@
     </linearGradient>
   </defs>
   <rect width="120" height="120" rx="24" fill="#0F172A"/>
-  <!-- Geometric A without crossbar -->
   <path d="M28 96 L60 20 L92 96" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="60" cy="20" r="5" fill="#06B6D4"/>
   <circle cx="28" cy="96" r="5" fill="#3B82F6"/>
