@@ -171,7 +171,7 @@ Admin plataforma pode listar empresas; Operador/Gestor/Auditoria ficam no tenant
 ### Padrões de chave (alto nível)
 
 | Entidade | Padrão sugerido | Notas |
-| --- | --- |
+| --- | --- | --- |
 | Tenant / Canal | `TENANT#<id>` / `CHANNEL#whatsapp` | Mapa `phone_number_id` → tenant |
 | Agente / Versão | `TENANT#<id>` / `AGENT#<id>` + `VERSION#<n>` | Só versão publicada atende canal |
 | Conversa | `TENANT#<id>` / `CONV#<id>` | GSI por contato + status |
@@ -204,7 +204,7 @@ Shell: estrutura/fluxos do mock Operador/Admin; sem registry genérico estilo Od
 ## 7. Amplify e ambientes
 
 | Ambiente | Uso | Notas |
-| --- | --- |
+| --- | --- | --- |
 | **dev** | Integração diária, WABA de teste / sandbox Meta se houver | Branch de desenvolvimento → Amplify app/env `dev` |
 | **prod** | Piloto Miralis | Branch estável; subdomain sob `ato.testto.com.br` (ex. console) |
 
@@ -283,7 +283,7 @@ Composition root: registrar stacks ATO em `packages/api` (ou bin CDK dedicado `a
 ## 11. Riscos em aberto
 
 | Risco | Impacto | Mitigação inicial |
-| --- | --- |
+| --- | --- | --- |
 | Qualidade Nova Lite em PT-BR / tool calling Miralis | Atendimento ruim ou tools erradas | Fixtures de conversa + critério explícito de upgrade de modelo |
 | Aprovação WABA / templates Meta do cliente | Bloqueio de envio proativo | Começar com janela de 24 h + templates mínimos; checklist de onboarding Miralis |
 | Dedup incompleto sob retry Meta | Cobrança dupla de tool / spam | Tabela dedup + idempotency_key obrigatória em mutação |
