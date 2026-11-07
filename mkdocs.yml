@@ -57,6 +57,8 @@ nav:
   - Identidade visual: identidade.md
   - Decisões MVP: decisoes-mvp.md
   - Arquitetura MVP: arquitetura-mvp.md
+  - Matriz de permissões: matriz-permissoes.md
+  - Auth (aprovação): auth-approval.md
   - Mapa das 14 telas: telas.md
   - Front (console): front.md
   - Anexos:
