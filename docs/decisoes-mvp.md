@@ -7,7 +7,7 @@
 | 3 | Número | Do cliente (WABA/número do tenant) |
 | 4 | Piloto | Miralis primeiro (único) |
 | 5 | LLM | Bedrock Nova Lite (padrão MVP; subir só se eval falhar) |
-| 6 | Auth | Cognito: Admin plataforma, Operador, Gestor cliente, Auditoria |
+| 6 | Auth | Cognito: `AdminPlataforma`, `Operador`, `GestorCliente`, `Auditoria`; fluxo [convite → aprovação](auth-approval.md); [matriz](matriz-permissoes.md) |
 | 7 | Repo | Packages novos em **airtestto**, reuso do compartilhado |
 | 8 | Fora do MVP | Billing multi-tenant, marketplace de skills, app do cliente final |
 

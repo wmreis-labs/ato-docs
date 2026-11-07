@@ -14,6 +14,8 @@ Domínio de referência: `ato.testto.com.br`
 | [Identidade visual](identidade.md) | Marca, paleta, tipografia, tokens de UI |
 | [Decisões MVP](decisoes-mvp.md) | Canal, piloto, LLM, auth, escopo |
 | [Arquitetura MVP](arquitetura-mvp.md) | Componentes, dados, segurança, pacotes |
+| [Matriz de permissões](matriz-permissoes.md) | Papel × tela × API; IDs Cognito; UI ≠ authz |
+| [Auth (aprovação)](auth-approval.md) | Convite → pending → aprovação; construct compartilhado |
 | [Mapa das 14 telas](telas.md) | Operador (6) + Admin (8) |
 | [Front (console)](front.md) | Repo sugerido, stack React/MUI, Amplify |
 | [Anexos](anexos/index.md) | Fit da stack Fase 3 e Evolution API |
