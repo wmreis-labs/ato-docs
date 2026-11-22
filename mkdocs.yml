@@ -61,6 +61,11 @@ nav:
   - Auth (aprovação): auth-approval.md
   - Mapa das 14 telas: telas.md
   - Front (console): front.md
+  - Legal:
+      - legal/index.md
+      - Política de privacidade: legal/privacidade.md
+      - Exclusão de dados: legal/exclusao-de-dados.md
+      - Termos de uso: legal/termos.md
   - Anexos:
       - anexos/index.md
       - Fit da stack (Fase 3): anexos/stack-fit-fase3.md
