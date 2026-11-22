@@ -18,6 +18,7 @@ Domínio de referência: `ato.testto.com.br`
 | [Auth (aprovação)](auth-approval.md) | Convite → pending → aprovação; construct compartilhado |
 | [Mapa das 14 telas](telas.md) | Operador (6) + Admin (8) |
 | [Front (console)](front.md) | Repo sugerido, stack React/MUI, Amplify |
+| [Legal](legal/index.md) | Privacidade, exclusão de dados e termos de uso |
 | [Anexos](anexos/index.md) | Fit da stack Fase 3 e Evolution API |
 
 ## Artefatos de design
