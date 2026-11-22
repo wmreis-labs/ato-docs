@@ -31,7 +31,7 @@ Estrutura e fluxos eleitos no discovery. A pele visual é **ATO** (não Atende).
 
 | # | Tela | Função |
 | --- | --- | --- |
-| 7 | Empresas | Lista multi-tenant: nome, status, plano |
+| 7 | Empresas | Fica no Testto Admin (cadastro: nome, status, plano). O ATO console não edita empresa; só escolhe a empresa ativa |
 | 8 | Agentes | Lista de agentes da empresa ativa |
 | 9 | Agente (detalhe) | Instruções, modelo, ferramentas, publicar versão |
 | 10 | Canal WhatsApp | WABA / número do cliente, status da conexão |
@@ -42,10 +42,10 @@ Estrutura e fluxos eleitos no discovery. A pele visual é **ATO** (não Atende).
 
 ## Fluxos-chave
 
-1. **Publicar agente** — Empresas → empresa → Agentes → detalhe → ferramentas → publicar (versão publicada fica só leitura).
+1. **Publicar agente** — empresa ativa → Agentes → detalhe → ferramentas → publicar (versão publicada fica só leitura).
 2. **Acompanhar conversa** — Atendimento → abrir → histórico + execuções de ferramenta.
 3. **Transferir para humano** — Na conversa, ação Transferir; o agente para de responder aquele fio.
-4. **Trocar empresa** — Shell troca a empresa ativa; listas passam a filtrar por ela.
+4. **Trocar empresa** — Shell troca a empresa ativa; listas passam a filtrar por ela. Cadastro de empresa é só no Testto Admin.
 
 ## Fora desta leva
 

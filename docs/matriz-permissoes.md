@@ -4,11 +4,13 @@
 
 Ver também o [padrão de auth (convite → aprovação)](auth-approval.md).
 
+**Cadastro de empresa** (nome, status, plano) é só no Testto Admin. O ATO console não cria nem edita empresa: o admin da plataforma só escolhe a empresa ativa a partir da lista (`GET /tenants`).
+
 ## IDs canônicos
 
 | Cognito `groupName` | Label UI (`AtoGroupLabel`) | Escopo |
 | --- | --- | --- |
-| `AdminPlataforma` | Admin da plataforma | Cross-tenant (lista empresas; troca tenant ativo) |
+| `AdminPlataforma` | Admin da plataforma | Cross-tenant (lê a lista de empresas; troca tenant ativo) |
 | `Operador` | Operador | Tenant da sessão (`custom:tenant`) |
 | `GestorCliente` | Gestor do cliente | Tenant da sessão |
 | `Auditoria` | Auditoria | Tenant da sessão; **read-mostly** |
@@ -27,7 +29,7 @@ Legenda: **✓** acesso de shell · **R** leitura · **W** escrita (quando a tel
 | Rota / menu | `AdminPlataforma` | `Operador` | `GestorCliente` | `Auditoria` | `PendingApproval` |
 | --- | --- | --- | --- | --- | --- |
 | `/login` | público | público | público | público | público |
-| Home (`/`) | → `/admin/empresas` | → `/operador` | → `/operador` | → `/auditoria/uso` | → tela “aguardando aprovação” *(GAP: inexistente)* |
+| Home (`/`) | → `/admin/agentes` | → `/operador` | → `/operador` | → `/auditoria/uso` | → tela “aguardando aprovação” *(GAP: inexistente)* |
 | **Shell Operador** | | | | | |
 | `/operador` Visão geral | ✓ | ✓ | ✓ | ✓ (R) | — |
 | `/operador/atendimento` | ✓ W | ✓ W | ✓ W | ✓ R | — |
@@ -36,7 +38,6 @@ Legenda: **✓** acesso de shell · **R** leitura · **W** escrita (quando a tel
 | `/operador/conhecimento` | ✓ | ✓ R | ✓ W *(política)* | ✓ R | — |
 | `/operador/implantacao` | ✓ | ✓ | ✓ | ✓ R | — |
 | **Shell Admin** (`RequireAdminAccess` → só `AdminPlataforma` hoje) | | | | | |
-| `/admin/empresas` | ✓ W | — | — | — | — |
 | `/admin/agentes` (+ `/:agentId`) | ✓ W | — | ✓ W *(GAP: UI não expõe)* | — | — |
 | `/admin/canal-whatsapp` | ✓ W | — | — *(secrets: só Admin)* | — | — |
 | `/admin/integracoes` | ✓ W | — | ✓ R/W tenant *(GAP)* | — | — |
@@ -88,7 +89,7 @@ Rotas ainda não implementadas no package `ato-console-api`; usar estes paths co
 | Método | Path | `AdminPlataforma` | `Operador` | `GestorCliente` | `Auditoria` | Notas |
 | --- | --- | --- | --- | --- | --- | --- |
 | GET | `/tenants` (empresas) | A | D | D | D | Lista cross-tenant |
-| GET/PATCH | `/tenants/:id` | A | D | R próprio tenant * | D | \* Gestor: só o próprio `custom:tenant` |
+| GET | `/tenants/:id` | A | D | R próprio tenant * | D | \* Gestor: só o próprio `custom:tenant`. Edição de empresa só no Testto Admin |
 | GET | `/agents` | A | R | A | R | Filtrado por tenant ativo |
 | POST/PATCH | `/agents`, `/agents/:id` | A | D | A | D | Publish versão = mutação sensível |
 | POST | `/agents/:id/publish` | A | D | A | D | |
